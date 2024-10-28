@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>tickit</title>
+</head>
+<body>
+  <header >
+    <nav class="navbar container">
+      <div class="nav_menu">
+        <div class="logo">
+        <img src="./images/logo.png" alt="">
+        </div>
+      <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Search for artist, event or venue">
+      </div>
+      <ul class="menu">
+        <li role="none">
+          <a href="https://www.ticketmaster.com/new/discover/concerts?_gl=1*1uif2ct*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk2NjIyNC44LjEuMTcyOTk3MTQxNS4zNS4wLjA.*_ga_H1KKSGW33X*MTcyOTk2OTQ3Ny45LjEuMTcyOTk3MTQxNC4zNi4wLjA."
+              title="Concerts" target="_self" role="link">Concerts</a>
+      </li>
+      <li role="none">
+          <a href="https://www.ticketmaster.com/new/discover/sports" title="Sports" target="_self" role="link">Sports</a>
+      </li>
+      <li role="none">
+          <a href="https://www.ticketmaster.com/new/discover/arts-theater" title="Arts &amp; Theater" target="_self" role="link">Arts &amp; Theater</a>
+      </li>
+      <li role="none">
+          <a href="https://www.ticketmaster.com/new/discover/family" title="Family" target="_self" role="link">Family</a>
+      </li>
+      <li role="none">
+          <a href="https://www.ticketmaster.com/microsite/premium" title="VIP" target="_self" role="link">VIP</a>
+      </li>
+      <li role="none">
+          <a href="https://www.ticketmaster.com/ticketdeals" title="Deals" target="_self" role="link">Deals</a>
+      </li>
+      </ul>
+      </div>
+      <div class="user-menu dropdown">
+          <a  class="dropdown-button dropdown" href="#">
+          <img src="./images/user.png" alt="">
+          <span class="user-name">William</span>
+          </a>
+          <a class="help" href="https://help.ticketmaster.com/hc/en-us">Help</a>
+          <div class="search-menu">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <span onclick="toggleMenu()" ><i class="fa-solid fa-bars"></i></span>
+          </div>
+          <ul class="dropdown-content">
+            <li><a href="https://my.ticketmaster.com/account" title="My Account">My Account</a></li>
+            <li><a href="https://www.ticketmaster.com/user/orders?_gl=1*y0hcxh*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk4Nzg3NC42MC4wLjA.*_ga_H1KKSGW33X*MTcyOTk4NzM0Ni4xMC4xLjE3Mjk5ODczNzkuMjcuMC4w" title="My Tickets">My Tickets</a></li>
+            <li><a href="https://my.ticketmaster.com/listings/active" title="My Listings">My Listings</a></li>
+            <li><a href="https://my.ticketmaster.com/settings" title="Settings">Settings</a></li>
+            <li><a href="https://www.ticketmaster.com/sell" title="Sell">Sell</a></li>
+            <li><a href="https://www.ticketmaster.com/verified" title="Learn About Verified Tickets">Learn About Verified Tickets</a></li>
+            <li><a href="https://my.ticketmaster.com/account/logout" title="Sign Out">Sign Out</a></li>
+      </ul>
+      </div>
+      <div class="mobile-view">
+      <a href="https://www.ticketmaster.com/user/orders">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0H0v24h24z"></path><path fill="#fff" fill-opacity=".65" fill-rule="nonzero" d="M10.773 20.738a.75.75 0 0 1-1.106 1.013L1.197 12.5a.75.75 0 0 1 0-1.013l8.47-9.243a.75.75 0 1 1 1.106 1.014l-8.006 8.736 8.006 8.745z"></path></g></svg>
+      </a>
+      <h3>Event Details</h3>
+      <div></div>
+      </div>
+  </nav>
+  <div class="">
+    <div class="mobile-menu mobile-sidebar">
+      <div class="sidebar-header">
+        <div class="header">
+          <div class="user-icon">👤</div>
+          <span>William</span>
+      </div>
+        <span style="font-size: 50px;" class="close-btn" onclick="toggleMenu()">×</span>
+      </div>
+      <div class="sidebar">
+        
+        <div class="section">
+            <h3><a href="https://www.ticketmaster.com/"></a>Discover</h3>
+            <ul>
+              <li><a href="https://www.ticketmaster.com/new/discover/concerts">Concerts</a></li>
+              <li><a href="https://www.ticketmaster.com/new/discover/sports">Sports</a></li>
+              <li><a href="https://www.ticketmaster.com/new/discover/arts-theater">Arts &amp; Theater</a></li>
+              <li><a href="https://www.ticketmaster.com/new/discover/family">Family</a></li>
+              <li><a href="https://www.ticketmaster.com/microsite/premium">VIP</a></li>
+              <li><a href="https://www.ticketmaster.com/ticketdeals">Deals</a></li>
+          </ul>
+        </div>
+  
+        <div class="section for-you">
+            <h3>For You</h3>
+        </div>
+        <hr class="sc-hMjcWo iuNLJx">
+        <div class="section my-account">
+            <h3><a href="https://my.ticketmaster.com/settings">My Account</a></h3>
+            <ul>
+              <li><a href="https://www.ticketmaster.com/user/orders">My Tickets</a></li>
+              <li><a href="https://my.ticketmaster.com/listings/active">My Listings</a></li>
+              <li><a href="https://my.ticketmaster.com/settings">Settings</a></li>
+              <li><a href="https://my.ticketmaster.com/wallet/vouchers">Credits &amp; Codes</a></li>
+          </ul>
+        </div>
+        <div class="section">
+            <h3>Sell</h3>
+            <p>Learn About Verified Tickets</p>
+            <div class="app-links">
+                <img src="./images/appstore.png" alt="App Store">
+                <img src="./images/playstore.png" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <p>Not William? <a style="color: white;" href="https://www.ticketmaster.com/">Sign Out</a></p>
+        </div>
+    </div>
+
+    </div>
+    
+  </div>
+  </header>
+  <main>
+  <div class="nav-link ">
+   <ul>
+   <li><a href=""><span>My Accoun</span> <span  class="arrow"><i width="1" class="fa-solid fa-chevron-right"></i></span></a></li>
+   <li><a href=""><span>My Events</span> <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span></a></li>
+   <li><a href=""><span>Event Details</span> <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span></a></li>
+   </ul>
+  </div>
+  
+  <div class="event-section">
+   <div class="event-title">
+   <h3>Event Details</h3>
+   <h2>Oregon Ducks Volleyball vs. UCLA Bruins Women's Volleyball</h2>
+   </div>
+    <!-- Event Details -->
+    <div class="event-details">
+    <div class="left-site">
+     
+      <div class="event-card">
+        
+        <img src="https://s1.ticketm.net/dam/a/425/c258875e-3b21-4d93-b268-153fcbbbd425_448891_TABLET_LANDSCAPE_16_9.jpg" alt="Event Image">
+        <div class="event-details-title">
+            <h2>Oregon Ducks Volleyball vs. UCLA Bruins Women's Volleyball</h2>
+            <div class="event-info">
+              <img src="./images/date.png" alt="">
+              <span>Nov 2 • 8:00 PM</span>
+            </div>
+            <div class="event-info share-you-001">
+                <span>Share You're Going</span>
+            </div>
+            <div class="event-info">
+              <img src="./images//adress.png" alt="">
+             <a href="https://www.ticketmaster.com/matthew-knight-arena-tickets-eugene/venue/123791?_gl=1*16vxos3*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk2NjIyNC44LjEuMTcyOTk2OTQ3OC42MC4wLjA.*_ga_H1KKSGW33X*MTcyOTk2OTQ3Ny45LjAuMTcyOTk2OTQ3Ny42MC4wLjA."> 
+             Matthew Knight Arena</a>
+            </div>
+            <div class="event-info">
+            <img src="./images/date.png" alt="">
+               <a href="https://www.google.com/maps/place/Matthew+Knight+Arena/@44.0449193,-123.0688858,737m/data=!3m2!1e3!4b1!4m6!3m5!1s0x54c11e256f24c207:0xbeff546639a20e7!8m2!3d44.0449193!4d-123.0663109!16s%2Fm%2F03m428l?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D">1776 E. 13th Ave, Eugene, OR, 97403</a>
+            </div>
+            <hr class="cart-line">
+            <div class="social-share">
+            <h3>Share You're Going</h3>
+              <div class="share-buttons">
+                <a href="https://www.facebook.com/dialog/feed?app_id=140669015975185&link=https%3A%2F%2Fwww.ticketmaster.com%2Foregon-ducks-volleyball-vs-ucla-bruins-eugene-oregon-11-02-2024%2Fevent%2F0F0060F6DE6945F5%3Futm_source%3Dfb%26utm_medium%3Dsocial%26utm_campaign%3Dshare_order">
+                <img src="./images/facebook.png" alt="">
+                </a>
+                <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.ticketmaster.com%2Foregon-ducks-volleyball-vs-ucla-bruins-eugene-oregon-11-02-2024%2Fevent%2F0F0060F6DE6945F5%3Futm_source%3Dtw%26utm_medium%3Dsocial%26utm_campaign%3Dshare_order&text=I%27m+excited+about+the+Oregon+Ducks+Volleyball+vs.+UCLA+Bruins+Women%27s+Volleyball+-+Matthew+Knight+Arena%2C+Eugene%2C+OR+-+Sat%2C+Nov+2.+Who%27s+in%3F">
+                <img src="./images/tweter.png" alt="">
+                </a>
+                <a href="#">
+                <img src="./images/smss1.png" alt="">
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    
+    </div>
+    <div class="help-container">
+      <h2>Need Help With Your Order?</h2>
+      <p>Use Chat to quickly find the answers you need.</p>
+      <a href="#" class="chat-button">
+        Chat
+        <img src="./images/sms.png" alt="">
+      </a>
+    </div>
+    </div>
+    <div class="right-site">
+     
+      <div class="ticket-status">
+        <h4>Your Phone Is Your Ticket</h4>
+        <div class="title-stutus-bottom">
+          <img src="./images/mob.png" alt="">
+            <p>Sign in to Ticketmaster on your phone and go to My Tickets. Your tickets will be there for you!</p>
+        </div>
+    </div>
+    <div>
+    
+   
+      <div class="ticket-container">
+        <div class="ticket-actions">
+          <a class="ticket-action" style="color: #026cdf; cursor: pointer;" href="./ticket.html">
+           <img src="./images/transfer.png" alt="">
+           <span> <p >Transfer Tickets</p></span>
+          </a>
+          <div class="ticket-action" href="#">
+           <img src="./images/rotet.png" alt="">
+           <span><a style="color: #026cdf;" href="https://my.ticketmaster.com/order/Z7IVgZOxvZ16kv4JAxd/sell"> Sell Tickets</a></span>
+          </div>
+        </div>
+        <div>
+        </div>
+       <div>
+        <div class="ticket-details">
+          <h3>My SafeTix™ (<span id="ticket-count">0</span>)</h3>
+          <div class="map">
+            <span><img src="./images/location2.png" alt=""></span>
+            <p><a href="">View map</a></p>
+          </div>
+        </div>
+        <div class="card-list-container">
+          <ul class="card-list">
+            <li class="styles__item--17Ov3">
+              <img src="./images/card.png" alt="">
+              <h4>Sec GA2, (General Admission)</h4>
+            </li>
+            <li class="styles__item--17Ov3">
+              <img src="./images/card.png" alt="">
+              <h4>Sec GA2, (General Admission)</h4>
+            </li>
+            <li class="styles__item--17Ov3">
+              <img src="./images/card.png" alt="">
+              <h4>Sec GA2, (General Admission)</h4>
+            </li>
+          </ul>
+        </div>
+        
+        
+        <p class="footer-text">
+          Can't find something you've purchased? Check your order confirmation email or 
+          <a href="https://www.ticketmaster.com/user/orders">View Your Orders</a>.
+        </p>
+      </div>
+       </div>
+      </div>
+        <div class="offer-container">
+          <h3>An Exclusive Offer From Our Sponsors</h3>
+          <div class="offer-content">
+            <img src="https://apps.rokt.com/userfiles/3311189446291096117.png" alt="SiriusXM Logo">
+            <div class="offer-text">
+              <p>Your purchase unlocked 4 months free of SiriusXM!</p>
+              <p>Get instant access to ad-free music and exclusive content to listen on the SiriusXM app. See Offer Details.</p>
+              <a href="#" style="font-size: 12px; color: #0066cc; text-decoration: none;">Terms & Conditions</a>
+            </div>
+            
+            <a href="https://www.disneyplus.com/welcome/unavailable?irclickid=QjX3QrRQbxyKUGAxojzv8SUMUkCWRUSRqUWK140&irgwc=1&cid=DSS-Affiliate-Impact-Strategic-Rokt.-2074493&campaignId=a0fe91e1-d1a1-40da-85c0-a9dc0efa72b9&offerId=1ccdcaae-ef82-4a1f-aa9b-039f657fdb70&tgclid=08010026-b6b7-4fbf-8600-02ce671c3bf2&dclid=CjgKEAjwg-24BhDp9I-pjfTMmC0SJACxBKV9sw1rlHxgfiBTpQNO6sY-ko-z6qXUmoAbVBLg1_-oE_D_BwE" class="offer-button">Claim offer</a>
+          </div>
+          <p class="footer-text-power ">
+            Powered by <a style="color: #026cdf" href="https://www.rokt.com/">Rokt</a> - <a  style="color: #026cdf" href="https://www.rokt.com/privacy-policy/">Privacy Policy</a>
+          </p>
+        </div>
+        
+        
+        <div class="order-info">
+          <div class="list">
+            <h4>Ticket Delivery</h4>
+            <p>Mobile </p>
+           </div>
+           <div class="list">
+            <h4>Order #</h4>
+            <p>
+              <span>74-25270/SEA</span>
+              <a style="color: #0066cc;" href="https://my.ticketmaster.com/order/Z7IVgZOxvZ16kv4JAxd/receipt">View Receipt</a>
+              </p>
+           </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div>
+    
+    </div>
+</div>
+
+  
+  </main>
+  <footer>
+    <div class="footer-lg-content">
+      <div class="footer-container">
+        <div class="footer-section  ">
+          <h3>Helpful Links</h3>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://help.ticketmaster.com">Help/FAQ</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/sell">Sell</a></li>
+            <li><a target="_blank" rel="noopener" href="https://my.ticketmaster.com/account">My Account</a></li>
+            <li><a target="_blank" rel="noopener" href="https://help.ticketmaster.com/s/article/How-do-I-contact-Customer-Service">Contact Us</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/giftcards">Gift Cards</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/h/returns.html">Refunds and Exchanges</a></li>
+            <li><a target="_blank" rel="noopener" href="https://help.ticketmaster.com/s/article/ny-registered-brokers">N.Y. Registered Brokers</a></li>
+            <li><a target="_blank" rel="noopener" href="https://privacyportal.onetrust.com/webform/ba6f9c5b-dda5-43bd-bac4-4e06afccd928/bfde11af-3096-44ce-9a34-1832f9d60912">Do Not Sell or Share My Personal Information</a></li>
+        </ul>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Our Network</h3>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://www.livenation.com/">Live Nation</a></li>
+      <li><a target="_blank" rel="noopener" href="http://www.houseofblues.com/">House of Blues</a></li>
+      <li><a target="_blank" rel="noopener" href="http://www.frontgatetickets.com/">Front Gate Tickets</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ticketweb.com/">TicketWeb</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.universe.com/">universe</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/nfl">NFL</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/nba">NBA</a></li>
+      <li><a target="_blank" rel="noopener" href="http://www.ticketmaster.com/nhl">NHL</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://business.ticketmaster.com/our-story/">Who We Are</a></li>
+          <li><a target="_blank" rel="noopener" href="https://blog.ticketmaster.com/">Ticketmaster Blog</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/ticketing101?_gl=1*1r4yc7i*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk5NDkzMy4zNS4wLjA.*_ga_H1KKSGW33X*MTcyOTk4OTYzNy4xMS4xLjE3Mjk5OTQ5MzIuMzYuMC4w">Ticketing 101</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.ticketmaster.com/h/privacy.html">Privacy Policy</a></li>
+          <li><a target="_blank" rel="noopener" href="http://jobs.ticketmaster.com/">Careers</a></li>
+          <li><a target="_blank" rel="noopener" href="http://business.ticketmaster.com/">Ticket Your Event</a></li>
+          <li><a target="_blank" rel="noopener" href="https://business.ticketmaster.com/business-solutions/future-focused/">Innovation</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Friends & Partners</h3>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://www.paypal.com/us/home">PayPal</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.eventticketprotection.com/tm/">Allianz</a></li>
+            <li><a target="_blank" rel="noopener" href="https://aws.amazon.com/">AWS</a></li>
+          </ul>
+          <div class="app-links">
+            <h3 class="get-app">Get Our App</h3>
+            <a href="https://apps.apple.com/us/app/ticketmaster-buy-sell-tickets/id500003565">
+           <img src="./images/appale.png" alt="">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.ticketmaster.mobile.android.na">
+            <img src="./images/playstoredoter.png" alt="">
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer-hr-content">
+        <hr >
+      </div>
+      <div class="footer-bottom footer-container">
+      <img src="./images/footer-logo.png" alt="">
+        <p>By continuing past this page, you agree to our <a class="term-and-cond" style="text-decoration: none;" href="https://help.ticketmaster.com/hc/en-us/articles/10468830739345-Terms-of-Use?_gl=1*eqb5wn*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk5Mjc3MS4yOC4wLjA.*_ga_H1KKSGW33X*MTcyOTk4OTYzNy4xMS4xLjE3Mjk5OTI3NzEuMjguMC4w">Terms of Use</a> <a class="manage-cookie" style="text-decoration: none;" href="https://help.ticketmaster.com/hc/en-us/articles/10468830739345-Terms-of-Use?_gl=1*7xxk8z*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk5MzIzNS4zOC4wLjA.*_ga_H1KKSGW33X*MTcyOTk4OTYzNy4xMS4xLjE3Mjk5OTMyMzUuMzguMC4w">Manage my cookies and ad choices</a>.</p>
+        <p>© Ticketmaster 2024</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Ticketmaster">
+          <img src="./images//fac.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/ticketmaster/?hl=en">
+          <img src="./images/ins.png" alt="">
+          </a>
+          <a href="https://x.com/ticketmaster">
+          <img src="./images/twe.png" alt="">
+          </a>
+          <a href="https://www.youtube.com/ticketmaster">
+          <img src="./images/you.png" alt="">
+          </a>
+          <a href="https://www.linkedin.com/company/ticketmaster/">
+          <img src="./images/link.png" alt="">
+          </a>
+  
+          
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="sm-footer">By continuing past this page, you agree to our <a class="term-and-cond" style="text-decoration: none;" href="https://help.ticketmaster.com/hc/en-us/articles/10468830739345-Terms-of-Use?_gl=1*eqb5wn*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk5Mjc3MS4yOC4wLjA.*_ga_H1KKSGW33X*MTcyOTk4OTYzNy4xMS4xLjE3Mjk5OTI3NzEuMjguMC4w">Terms of Use</a> <a class="manage-cookie" style="text-decoration: none;" href="https://help.ticketmaster.com/hc/en-us/articles/10468830739345-Terms-of-Use?_gl=1*7xxk8z*_gcl_au*ODU0MTUxNTYzLjE3Mjk4Nzg2NDc.*_ga*MTU1MTY3ODYxMC4xNzI5ODc4NjQ4*_ga_C1T806G4DF*MTcyOTk4NzM0Ni45LjEuMTcyOTk5MzIzNS4zOC4wLjA.*_ga_H1KKSGW33X*MTcyOTk4OTYzNy4xMS4xLjE3Mjk5OTMyMzUuMzguMC4w">Manage my cookies and ad choices</a>.</p>
+    </div>
+  </footer>
+   <!-- chat button  -->
+   <a href="#" class="chat-button-custom">
+    <img src="./images/chat.png" alt="">
+    Chat
+  </a>
+   <!-- Overlay and popup container -->
+   <div style="display: none;" class="overlay">
+    <div class="popup">
+       <div>
+        <div class="icon"><img src="./images/loadimg.png" alt=""></div>
+        <h2>Just a moment...</h2>
+       </div>
+    </div>
+
+</div>
+  <script src="./index.js"></script>
+</body>
+</html>
