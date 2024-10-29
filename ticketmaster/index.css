@@ -665,7 +665,7 @@ main {
 .my-account {
   margin-top: 10px;
 }
-.app-links {
+.app-links-sidebar {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -673,8 +673,8 @@ main {
 }
 
 
-.app-links img {
-  width: 30px;
+.app-links-sidebar img {
+  width: 120px;
 }
 
 .iuNLJx {
